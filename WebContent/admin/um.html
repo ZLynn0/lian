@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户列表</title>
+		<link rel="stylesheet" type="text/css" href="/project1/admin/easyui/themes/default/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="/project1/admin/easyui/themes/icon.css"/>
+		<script src="/project1/admin/easyui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/project1/admin/easyui/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/project1/admin/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/project1/admin/js/usermanager.js"></script>
+	<style type="text/css">
+	#tb{
+		width: 300px;
+		margin: 20px auto;
+	}
+	#tb td{
+		padding: 7px;
+	}
+	</style>
+</head>
+<body>
+用户列表
+<hr />
+<table id="tab"></table>
+<div id="dialog" class="easyui-dialog" title="添加用户" style="width:400px;height:400px" data-options="iconCls:'icon-add', 
+                collapsible:true,resizable:true,modal:true,buttons:'#footer',closed:true">   
+      <form action="" method="post" id="f1" name="f1">
+      		<table id="tb">
+      			<tr>
+      				<td>邮箱：</td>
+      				<td><input id="email" name="email" class="easyui-validatebox easyui-textbox" data-options="required:true,validType:'email'" /></td>
+      			</tr>
+      			<tr>
+      				<td>账号：</td>
+      				<td><input id="username" name="username" class="easyui-validatebox easyui-textbox" data-options="required:true" /></td>
+      			</tr>
+      			<tr>
+      				<td>密码：</td>
+      				<td><input id="password" name="password" class="easyui-validatebox easyui-textbox" data-options="required:true" /></td>
+      			</tr>
+
+      			<tr>
+      				<td>地址：</td>
+      				<td><input id="address" name="address" class="easyui-validatebox easyui-textbox" data-options="required:true" /></td>
+      			</tr>
+      			<tr>
+      				<td>电话：</td>
+      				<td><input id="tel" name="tel" class="easyui-validatebox easyui-textbox" data-options="required:true,validType:'length[11,11]'" /></td>
+      			</tr>
+       			<tr>
+      				<td>性别：</td>
+      				<td>
+      					<select id="sex" class="easyui-combobox" name="sex" style="width: 173px;">
+      						<option value="男">男</option>
+      						<option value="女">女</option>
+      					</select>
+      				</td>
+      			</tr>     		
+      		</table>
+      
+      </form>
+</div>
+<div id="footer">
+	<a id="btnsave" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>  
+	<a id="btncancel" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">取消</a>  
+</div>
+</body>
+</html>

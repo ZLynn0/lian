@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>商品订单</title>
+		<link rel="stylesheet" type="text/css" href="/project1/admin/easyui/themes/default/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="/project1/admin/easyui/themes/icon.css"/>
+		<script src="/project1/admin/easyui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/project1/admin/easyui/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/project1/admin/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/project1/admin/js/goodsorder.js"></script>
+		<script type="text/javascript" src="/project1/admin/js/datagrid-detailview.js"></script>
+<style type="text/css">
+	#tb{
+		width: 400px;
+		margin: 20px auto;
+	}
+	#tb td{
+		padding: 7px;
+	}
+</style>
+</head>
+<body>
+商品订单
+<hr size="0">
+<!-- combobox支持动态绑定数据 -->
+<p></p>
+<table id="tab3"></table>
+<div id="dialog1" class="easyui-dialog" title="修改用户" style="width:500px;height:500px" data-options="iconCls:'icon-add', 
+                collapsible:true,resizable:true,modal:true,buttons:'#footer1',closed:true">   
+      <form action="" method="post" id="f1" name="f1">
+      		<table id="tb">
+      			<tr>
+      				<td>订单编号：</td>
+      				<td><input id="orderid" name="orderid" class="easyui-validatebox easyui-textbox" data-options="required:true" /></td>
+      			</tr>
+      			<tr>
+      				<td>用户id：</td>
+      				<td><input id="userid" name="userid" class="easyui-validatebox easyui-textbox" data-options="required:true" /></td>
+      			</tr>
+      			<tr>
+      				<td>总价：</td>
+      				<td><input id="totalprice" name="totalprice" class="easyui-validatebox easyui-textbox" data-options="required:true" /></td>
+      			</tr>
+
+      			<tr>
+      				<td>下单日期：</td>
+      				<td><input id="orderdate" name="orderdate" class="easyui-validatebox easyui-textbox" data-options="required:true" /></td>
+      			</tr>
+      			<tr>
+      				<td>收货人：</td>
+      				<td><input id="name" name="name" class="easyui-validatebox easyui-textbox" data-options="required:true" /></td>
+      			</tr>
+      			<tr>
+      				<td>收货地址：</td>
+      				<td><input id="address" name="address" class="easyui-validatebox easyui-textbox" data-options="required:true" /></td>
+      			</tr>    	
+      			<tr>
+      				<td>电话：</td>
+      				<td><input id="tel" name="tel" class="easyui-validatebox easyui-textbox" data-options="required:true" /></td>
+      			</tr> 	
+      		</table>
+      
+      </form>
+</div>
+<div id="footer1">
+	<a id="btnsave" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>  
+	<a id="btncancel" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">取消</a>  
+</div>
+</body>
+</html>

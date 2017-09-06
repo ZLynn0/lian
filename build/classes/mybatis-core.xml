@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mybatis 核心配置文件 -->
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+<properties resource="db.properties"></properties>
+<typeAliases>
+	<typeAlias type="entity.Dept" alias="dept"/>
+	<package name="entity"/>
+</typeAliases>
+<plugins>
+<plugin interceptor="com.github.pagehelper.PageHelper"></plugin>
+</plugins>
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+  <!-- 配置mybatis映射文件 -->
+    <mapper resource="deptsqlmapper.xml"/>
+  <!--   <mapper resource="DeptMapper.xml"/> -->
+  <package name="mapper"/>
+  </mappers>
+</configuration>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+				<link rel="stylesheet" type="text/css" href="/project1/admin/easyui/themes/default/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="/project1/admin/easyui/themes/icon.css"/>
+		<script src="/project1/admin/easyui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/project1/admin/easyui/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/project1/admin/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/project1/admin/js/seting.js"></script>
+<style type="text/css">
+	#tb{
+		width: 300px;
+		margin: 20px auto;
+	}
+	#tb td{
+		padding: 7px;
+	}
+	</style>
+	</head>
+	<body>
+		权限设置
+		<hr />
+<table id="tab2"></table>
+<div id="dialog" class="easyui-dialog" title="修改用户" style="width:500px;height:400px" data-options="iconCls:'icon-add', 
+                collapsible:true,resizable:true,modal:true,closed:true">   
+      <form action="" method="post" id="f1" name="f1">
+      		<table id="tb">
+      			<tr>
+      				<td>用户姓名：</td>
+      				<td><input id="uloginid" name="uloginid" class="easyui-validatebox easyui-textbox" data-options="required:true" /></td>
+      			</tr>
+      			<tr>
+      				<td>是否有效：</td>
+      				<td>是<input type="radio" id="ustateid" name="ustateid" value="B5868B7A06E54DAEB19658343D3A2B28" />
+      				否<input type="radio" id="ustateid" name="ustateid" value="36D0F394FC6A45829385E0BE11208263" /></td>      			</tr>
+      			<tr>
+      				<td>是否管理员：</td>
+      				<td>是<input type="radio" id="uroleid" name="uroleid" value="377D0AE90A804D289F301FB085A6E9AA" />
+      				否<input type="radio" id="uroleid" name="uroleid" value="116F9526C319462780B9CA72F6BB9B41" /></td>
+      			</tr>	
+      		</table>
+      
+      </form>
+</div>
+		
+	</body>
+</html>
